@@ -4,8 +4,12 @@ body {
 }
 
 main {
-  flex: 1;
   display: flex;
+}
+
+main > .d-flex {
+  flex: 1;
+  width: 100%;
 }
 
 .button {
@@ -71,12 +75,6 @@ main {
   transform: scale(0.8);
 }
 
-.layout {
-  display: flex;
-  flex: 1;
-  background-color: #f5f5f5;
-}
-
 .sidebar {
   width: 240px;
   flex-shrink: 0;
@@ -92,6 +90,7 @@ main {
 .conteudo {
   flex: 1;
   padding: 24px;
+  width: 100%;
 }
 
 .topo-conteudo {
@@ -279,19 +278,6 @@ main {
 
 .btn-withdraw:hover {
   background-color: #e5e5e5;
-}
-
-.conteudo-principal {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start; 
-}
-
-.coluna-direita {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
 }
 
 .chart-card {
@@ -503,12 +489,6 @@ main {
   padding: 0 8px;
 }
 
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
 .nav-item {
   display: flex;
   align-items: center;
@@ -541,7 +521,7 @@ main {
   color: #e0447b;
 }
 
-.sidebar-nav.sidebar-footer {
+.sidebar-footer {
   margin-top: auto;
   border-top: 1px solid #eee;
   padding-top: 16px;
@@ -549,4 +529,10 @@ main {
 
 .nav-logout:hover {
   background-color: #fde4ec;
+}
+
+.balance-card,
+.chart-card,
+.transaction-card {
+  width: 100%; /* garante que não fiquem menores que o container */
 }

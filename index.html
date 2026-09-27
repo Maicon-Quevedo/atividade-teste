@@ -9,13 +9,13 @@
 </head>
 <body>
     <main>
-        <div class="layout">
+        <div class="d-flex">
         <aside class="sidebar">
             <div class="sidebar-logo">
                 <span>iuPayme</span>
             </div>
 
-            <nav class="sidebar-nav">
+            <nav class="d-flex flex-column gap-1">
                 <a href="#" class="nav-item active">
                     <span class="nav-icon">🏠</span>
                     <span>Home</span>
@@ -46,7 +46,7 @@
                 </a>
             </nav>
 
-            <nav class="sidebar-nav sidebar-footer">
+            <nav class="d-flex flex-column gap-1 sidebar-footer">
                 <a href="#" class="nav-item">
                     <span class="nav-icon">⚙️</span>
                     <span>Configurações</span>
@@ -61,7 +61,7 @@
                 </a>
             </nav>
         </aside>
-            <div class="conteudo">
+            <div class="conteudo flex-grow-1">
                 <div class="topo-conteudo">
                     <button class="button">
                         <svg viewBox="0 0 448 512" class="bell"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
@@ -73,96 +73,96 @@
                     </button>
                 </div>
                 
-                <div class="conteudo-principal">
-                
-                    <div class="cards-container">
-                        <div class="visa-card">
-                            <div class="logoContainer">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48" class="svgLogo">
-                                <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path>
-                                <path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path>
-                                <path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
-                            </svg>
-                            </div>
-                            <div class="number-container">
-                            <label class="input-label">CARD NUMBER</label>
-                            <input class="inputstyle" placeholder="XXXX XXXX XXXX XXXX" type="text" readonly />
-                            </div>
-                            <div class="name-date-cvv-container">
-                                <div class="name-wrapper">
-                                    <label class="input-label">CARD HOLDER</label>
-                                    <input class="inputstyle" placeholder="NAME" type="text" readonly />
+                <div class="row g-4">
+                    <div class="col-auto">
+                        <div class="cards-container">
+                            <div class="visa-card">
+                                <div class="logoContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48" class="svgLogo">
+                                    <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path>
+                                    <path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path>
+                                    <path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
+                                </svg>
                                 </div>
-                                <div class="expiry-wrapper">
-                                    <label class="input-label">VALID THRU</label>
-                                    <input class="inputstyle" placeholder="MM/YY" type="text" readonly />
+                                <div class="number-container">
+                                <label class="input-label">CARD NUMBER</label>
+                                <input class="inputstyle" placeholder="XXXX XXXX XXXX XXXX" type="text" readonly />
                                 </div>
-                                <div class="cvv-wrapper">
-                                    <label class="input-label">CVV</label>
-                                    <input class="inputstyle" placeholder="***" maxlength="3" type="password" readonly />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="visa-card">
-                            <div class="logoContainer">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48" class="svgLogo">
-                                <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path>
-                                <path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path>
-                                <path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
-                            </svg>
-                            </div>
-                            <div class="number-container">
-                            <label class="input-label">CARD NUMBER</label>
-                            <input class="inputstyle" placeholder="XXXX XXXX XXXX XXXX" type="text" readonly />
-                            </div>
                                 <div class="name-date-cvv-container">
-                                <div class="name-wrapper">
-                                    <label class="input-label">CARD HOLDER</label>
-                                    <input class="inputstyle" placeholder="NAME" type="text" readonly />
+                                    <div class="name-wrapper">
+                                        <label class="input-label">CARD HOLDER</label>
+                                        <input class="inputstyle" placeholder="NAME" type="text" readonly />
+                                    </div>
+                                    <div class="expiry-wrapper">
+                                        <label class="input-label">VALID THRU</label>
+                                        <input class="inputstyle" placeholder="MM/YY" type="text" readonly />
+                                    </div>
+                                    <div class="cvv-wrapper">
+                                        <label class="input-label">CVV</label>
+                                        <input class="inputstyle" placeholder="***" maxlength="3" type="password" readonly />
+                                    </div>
                                 </div>
-                                <div class="expiry-wrapper">
-                                    <label class="input-label">VALID THRU</label>
-                                    <input class="inputstyle" placeholder="MM/YY" type="text" readonly />
+                            </div>
+
+                            <div class="visa-card">
+                                <div class="logoContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48" class="svgLogo">
+                                    <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path>
+                                    <path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path>
+                                    <path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
+                                </svg>
                                 </div>
-                                <div class="cvv-wrapper">
-                                    <label class="input-label">CVV</label>
-                                    <input class="inputstyle" placeholder="***" maxlength="3" type="password" readonly />
+                                <div class="number-container">
+                                <label class="input-label">CARD NUMBER</label>
+                                <input class="inputstyle" placeholder="XXXX XXXX XXXX XXXX" type="text" readonly />
+                                </div>
+                                    <div class="name-date-cvv-container">
+                                    <div class="name-wrapper">
+                                        <label class="input-label">CARD HOLDER</label>
+                                        <input class="inputstyle" placeholder="NAME" type="text" readonly />
+                                    </div>
+                                    <div class="expiry-wrapper">
+                                        <label class="input-label">VALID THRU</label>
+                                        <input class="inputstyle" placeholder="MM/YY" type="text" readonly />
+                                    </div>
+                                    <div class="cvv-wrapper">
+                                        <label class="input-label">CVV</label>
+                                        <input class="inputstyle" placeholder="***" maxlength="3" type="password" readonly />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="visa-card">
+                                <div class="logoContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48" class="svgLogo">
+                                    <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path>
+                                    <path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path>
+                                    <path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
+                                </svg>
+                                </div>
+                                <div class="number-container">
+                                <label class="input-label">CARD NUMBER</label>
+                                <input class="inputstyle" placeholder="XXXX XXXX XXXX XXXX" type="text" readonly />
+                                </div>
+                                <div class="name-date-cvv-container">
+                                    <div class="name-wrapper">
+                                        <label class="input-label">CARD HOLDER</label>
+                                        <input class="inputstyle" placeholder="NAME" type="text" readonly />
+                                    </div>
+                                    <div class="expiry-wrapper">
+                                        <label class="input-label">VALID THRU</label>
+                                        <input class="inputstyle" placeholder="MM/YY" type="text" readonly />
+                                    </div>
+                                    <div class="cvv-wrapper">
+                                        <label class="input-label">CVV</label>
+                                        <input class="inputstyle" placeholder="***" maxlength="3" type="password" readonly />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="visa-card">
-                            <div class="logoContainer">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48" class="svgLogo">
-                                <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path>
-                                <path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path>
-                                <path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
-                            </svg>
-                            </div>
-                            <div class="number-container">
-                            <label class="input-label">CARD NUMBER</label>
-                            <input class="inputstyle" placeholder="XXXX XXXX XXXX XXXX" type="text" readonly />
-                            </div>
-                            <div class="name-date-cvv-container">
-                                <div class="name-wrapper">
-                                    <label class="input-label">CARD HOLDER</label>
-                                    <input class="inputstyle" placeholder="NAME" type="text" readonly />
-                                </div>
-                                <div class="expiry-wrapper">
-                                    <label class="input-label">VALID THRU</label>
-                                    <input class="inputstyle" placeholder="MM/YY" type="text" readonly />
-                                </div>
-                                <div class="cvv-wrapper">
-                                    <label class="input-label">CVV</label>
-                                    <input class="inputstyle" placeholder="***" maxlength="3" type="password" readonly />
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     
-                    <div class="coluna-direita">
+                    <div class="col d-flex flex-column gap-4">
                         <div class="balance-card">
                             <div class="balance-header">
                                 <span class="balance-title">Total balance</span>
@@ -279,8 +279,5 @@
             </div>
         </div>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>
