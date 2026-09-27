@@ -10,9 +10,57 @@
 <body>
     <main>
         <div class="layout">
-            <aside class="sidebar">
-                <!-- conteúdo da sidebar vem aqui depois -->
-            </aside>
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span>iuPayme</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">🏠</span>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">💳</span>
+                    <span>Contas</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🔄</span>
+                    <span>Transferências</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📄</span>
+                    <span>Extrato</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📈</span>
+                    <span>Investimentos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🏦</span>
+                    <span>Empréstimos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🐷</span>
+                    <span>Orçamento</span>
+                </a>
+            </nav>
+
+            <nav class="sidebar-nav sidebar-footer">
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Configurações</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">💬</span>
+                    <span>Ajuda / Suporte</span>
+                </a>
+                <a href="#" class="nav-item nav-logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Sair</span>
+                </a>
+            </nav>
+        </aside>
             <div class="conteudo">
                 <div class="topo-conteudo">
                     <button class="button">
@@ -127,37 +175,103 @@
                                 <button class="btn-withdraw">Withdraw</button>
                             </div>
                         </div>
-                            <div class="chart-card">
-                                <div class="chart-header">
-                                    <span class="chart-legend">
-                                        <span class="dot dot-income"></span> Income
-                                        <span class="dot dot-withdrawals"></span> Withdrawals
-                                    </span>
-                                </div>
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <span class="chart-legend">
+                                    <span class="dot dot-income"></span> Income
+                                    <span class="dot dot-withdrawals"></span> Withdrawals
+                                </span>
+                            </div>
 
-                                <div class="chart-tooltip">+ $ 88.99</div>
+                            <div class="chart-tooltip">+ $ 88.99</div>
 
-                                <svg viewBox="0 0 500 150" class="chart-svg" preserveAspectRatio="none">
-                                    <polyline
-                                        class="line-income"
-                                        points="0,100 70,80 140,60 210,90 280,40 350,70 420,50 500,90"
-                                    />
-                                    <polyline
-                                        class="line-withdrawals"
-                                        points="0,60 70,110 140,90 210,50 280,100 350,40 420,90 500,60"
-                                    />
-                                </svg>
+                            <svg viewBox="0 0 500 150" class="chart-svg" preserveAspectRatio="none">
+                                <polyline
+                                    class="line-income"
+                                    points="0,100 70,80 140,60 210,90 280,40 350,70 420,50 500,90"
+                                />
+                                <polyline
+                                    class="line-withdrawals"
+                                    points="0,60 70,110 140,90 210,50 280,100 350,40 420,90 500,60"
+                                />
+                            </svg>
 
-                                <div class="chart-days">
-                                    <span>Mon</span>
-                                    <span>Tue</span>
-                                    <span>Wed</span>
-                                    <span>Thu</span>
-                                    <span>Fri</span>
-                                    <span>Sat</span>
-                                    <span>Sun</span>
+                            <div class="chart-days">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                        </div>
+
+                        <div class="transaction-card">
+                            <div class="transaction-header">
+                                <span class="transaction-title">Transaction History</span>
+                                <div class="search-box">
+                                    <input type="text" placeholder="Search" />
+                                    <span class="search-icon">🔍</span>
                                 </div>
                             </div>
+
+                            <table class="transaction-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nº</th>
+                                        <th>ID</th>
+                                        <th>Transfer Type</th>
+                                        <th>User</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0000000289</td>
+                                        <td><span class="icon-arrow up">↑</span> Receiving money</td>
+                                        <td>Igor Cauan</td>
+                                        <td class="amount positive">+ $200</td>
+                                        <td>2020-05-24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>0000000289</td>
+                                        <td><span class="icon-arrow down">↓</span> Receiving money</td>
+                                        <td>João Paulo</td>
+                                        <td class="amount positive">+ $400</td>
+                                        <td>2020-05-24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>0000000289</td>
+                                        <td><span class="icon-arrow down">↓</span> Receiving money</td>
+                                        <td>Ana Beatriz</td>
+                                        <td class="amount negative">- $180</td>
+                                        <td>2020-05-24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>0000000289</td>
+                                        <td><span class="icon-arrow down">↓</span> Receiving money</td>
+                                        <td>Manuela de Jesus</td>
+                                        <td class="amount positive">+ $260</td>
+                                        <td>2020-04-20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="pagination">
+                                <button class="page-arrow">‹</button>
+                                <button class="page-number active">1</button>
+                                <button class="page-number">2</button>
+                                <button class="page-number">3</button>
+                                <button class="page-arrow">›</button>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
